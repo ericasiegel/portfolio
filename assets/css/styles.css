@@ -1,0 +1,88 @@
+/* Whole Page */
+:root {
+    --p-color: #172850;
+    --s-color: #223153;
+    --t-color: #82a5f5;
+    --f-color: #02194e;
+    --b-color: #1d2044;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: var(--s-color);
+    background-color: rgb(234, 239, 245);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* "Header" Styles */
+header {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed; 
+    padding: 20px 35px;
+    background-color: var(--b-color);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+header h1 {
+ font-weight: bold;
+ font-family: copperplate;
+ font-size: 40px;
+ color: var(--t-color);
+ margin: 0;
+ text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+header h1 a {
+    color: var(--t-color);
+}
+header a {
+    text-decoration: none;
+    color: var(--t-color);
+}
+header nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+header nav ul li a:hover {
+  background: var(--p-color);
+  color: var(--t-color);
+  border-radius: 10px;
+  text-shadow: none;
+}
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+header ul li a img {
+    height: 35px;
+    width: 35px;
+    margin: 10px;
+    background-color: var(--t-color);
+    border-radius: 40px;
+}
+
+/* "Hero" Styles */
