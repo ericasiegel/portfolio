@@ -61,19 +61,29 @@
         </section>
         <!-- End "Hero" -->
         
-        <!-- Start "About Me" and "My Projects" -->
+        <!-- Start Content -->
         <section id="about-me">
             <div class="grid-wrapper">
                <div class="grid-container">
                     <!-- Headers -->
                     <div class="grid-item grid-head about-head">
-                        <h2 class="section-title secondary-border">
+                        <h2 class="section-title primary-border">
                             About Me
                         </h2>
                     </div>
-                    <div id="my-projects" class="grid-item grid-head project-head">
-                        <h2 class="section-title secondary-border">
+                    <div id="my-work" class="grid-item grid-head project-head">
+                        <h2 class="section-title primary-border">
                             My Projects
+                        </h2>
+                    </div>
+                    <div id="resume" class="grid-item grid-head resume-head">
+                        <h2 class="section-title primary-border">
+                            My Resume
+                        </h2>
+                    </div>
+                    <div id="contact-me" class="grid-item grid-head contact-head">
+                        <h2 class="section-title primary-border">
+                            Contact Me
                         </h2>
                     </div>
                     <!-- Body:About -->
@@ -83,7 +93,7 @@
                     <!-- Body:Projects -->
                     <div class="project-grid-wrapper">
                         <div class="project-grid-container">
-                            <div class="grid-item projects">
+                            <div class="p-grid-item projects rb">
                                 <article class="project">
                                     <div class="project-img project-1">
                                         <div>
@@ -92,7 +102,7 @@
                                     </div>          
                                 </article>
                             </div>
-                            <div class="grid-item projects">
+                            <div class="p-grid-item projects">
                                 <article class="project">
                                     <div class="project-img project-2">
                                         <div>
@@ -101,7 +111,7 @@
                                     </div>          
                                 </article>
                             </div>
-                            <div class="grid-item projects">
+                            <div class="p-grid-item projects">
                                 <article class="project">
                                     <div class="project-img project-3">
                                         <div>
@@ -110,7 +120,7 @@
                                     </div>          
                                 </article>
                             </div>
-                            <div class="grid-item projects">
+                            <div class="p-grid-item projects">
                                 <article class="project">
                                     <div class="project-img project-4">
                                         <div>
@@ -121,48 +131,32 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Body:Resume -->
+                    <div class="grid-item resume">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        <p>
+                            For a downloadable link to my resume <a href="#">Click Here</a>
+                        </p>
+                    </div>
+                    <!-- Body:Contact-->
+                    <div class="grid-item contact">
+                        <div class="contact-form">
+                            <form>
+                                <label for="contact-name">Your Name</label>
+                                <input type="text" id="contact-name" placeholder="message" />
+                                <label for="email">Email address:</label>
+                                <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" />
+                                <label for="phone">Telephone number:</label>
+                                <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input" />
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" placeholder="Message"></textarea>
+                            </form>
+                        </div>
+                </div>
                </div> 
             </div>
         </section>
-        <!-- End "About Me" and "My Projects" -->
-
-        <!-- Start "Resume" -->
-        <section id="resume">
-            <div class="flex-row">
-                <h2 class="section-title secondary-border">My Resume</h2>
-            </div>
-            <div class="flex-row">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <p>
-                    For a downloadable link to my resume <a href="#">Click Here</a>
-                </p>
-            </div>
-        </section>
-        <!-- End "Resume" -->
-
-        <!-- Start "Contact" -->
-        <section id="contact-me" class="contact">
-            <div class="flex-row">
-                <h2 class="section-title secondary-border">
-                    Contact Me
-                </h2>
-            </div>
-            <div class="contact-form">
-                <form>
-                    <label for="contact-name">Your Name</label>
-                    <input type="text" id="contact-name" placeholder="message" />
-                    <label for="email">Email address:</label>
-                    <input type="email" placeholder="Email Address" name="email" id="email" class="form-input" />
-                    <label for="phone">Telephone number:</label>
-                    <input type="tel" placeholder="Phone Number" name="phone" id="phone" class="form-input" />
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" placeholder="Message"></textarea>
-                </form>
-            </div>
-        </section>
-        <!-- End "Contact" -->
+        <!-- End Content -->
 
         <!-- Footer -->
         <footer>

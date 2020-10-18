@@ -14,19 +14,21 @@
 .section-title {
     font-size: 48px;
     color: var(--f-color);
-    border-bottom: 2px solid;
     padding-bottom: 10px;
+    border-right: 2px solid;
     text-align: center;
     margin: 0 auto 20px auto;
     width: 50%;
   }
   
   .primary-border {
-    border-color: var(--p-color);
+    border-right: 3px solid var(--t-color);
+    height: 200px;
   }
   
   .secondary-border {
-    border-color: var(--t-color);
+    border-color: 3px solid var(--t-color);
+    width: 300px;
   }
 
 body {
@@ -129,16 +131,18 @@ header ul li a img {
 .grid-wrapper {
     display: flex;
     width: 100%;
+    height: fit-content;
     justify-content: center;
 }
 .grid-container {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(11, 1fr);
 }
 .grid-item {
     padding: 35px 0;
+    width: auto;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -152,13 +156,49 @@ header ul li a img {
     grid-column: 1 / span 3;
     grid-row: 3 / span 5;
 }
+.grid-item.resume-head {
+    grid-column: 1 / span 3;
+    grid-row: 8 / span 2;
+}
+.grid-item.contact-head {
+    grid-column: 1 / span 3;
+    grid-row: 10 / span 5;
+}
 .grid-item.about {
     grid-column: 4 / span 5;
     grid-row: 1 / span 2;
 }
-.grid-item.projects {
+.grid-item.resume {
+    grid-column: 4 / span 5;
+    grid-row: 8 / span 2;
+}
+.grid-item.contact {
+    grid-column: 4 / span 5;
+    grid-row: 10 / span 5;
+}
+.project-grid-wrapper {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    grid-column: 4 /span 5;
+    grid-row: 3 / span 5;
+}
+.project-grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 20px;
+}
+.p-grid-item.projects {
     border: 2px solid var(--b-color);
 }
-.grid-item.projects:nth-child(2) {
-    
-}
+.p-grid-item.projects:nth-child(2n) {
+    grid-column: span 5;
+    grid-row: span 4;
+  }
+  .p-grid-item.projects:nth-child(oddn) {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
