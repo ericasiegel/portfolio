@@ -11,6 +11,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+.section-title {
+    font-size: 48px;
+    color: var(--f-color);
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 0 auto 20px auto;
+    width: 50%;
+  }
+  
+  .primary-border {
+    border-color: var(--p-color);
+  }
+  
+  .secondary-border {
+    border-color: var(--t-color);
+  }
+
 body {
     color: var(--s-color);
     background-color: rgb(234, 239, 245);
@@ -86,3 +104,61 @@ header ul li a img {
 }
 
 /* "Hero" Styles */
+.hero {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    height: 400px;
+}
+.hero-subtitle {
+    margin: 20px;
+
+}
+.hero-subtitle h2 {
+    font-size: 34px;
+    width: 100%;
+    color: var(--t-color);
+}
+
+/* "About Me" and "Project" Styles */
+.grid-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.grid-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+.grid-item {
+    padding: 35px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+}
+.grid-item.about-head {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+.grid-item.project-head {
+    grid-column: 1 / span 3;
+    grid-row: 3 / span 5;
+}
+.grid-item.about {
+    grid-column: 4 / span 5;
+    grid-row: 1 / span 2;
+}
+.grid-item.projects {
+    border: 2px solid var(--b-color);
+}
+.grid-item.projects:nth-child(2) {
+    
+}
