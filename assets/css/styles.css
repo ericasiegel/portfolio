@@ -167,15 +167,19 @@ header ul li a img {
 .grid-item.about {
     grid-column: 4 / span 5;
     grid-row: 1 / span 2;
+    font-size: 20px;
 }
 .grid-item.resume {
     grid-column: 4 / span 5;
     grid-row: 8 / span 2;
+    font-size: 20px;
 }
 .grid-item.contact {
     grid-column: 4 / span 5;
     grid-row: 10 / span 5;
 }
+
+/* "Projects" styles */
 .project-grid-wrapper {
     display: flex;
     width: 100%;
@@ -188,7 +192,7 @@ header ul li a img {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     gap: 20px;
 }
 .p-grid-item.projects {
@@ -198,7 +202,146 @@ header ul li a img {
     grid-column: span 5;
     grid-row: span 4;
   }
-  .p-grid-item.projects:nth-child(oddn) {
+  .p-grid-item.projects:nth-child(3n) {
     grid-column: span 3;
-    grid-row: span 3;
+    grid-row: span 4;
   }
+  .p-grid-item.projects.rb {
+    grid-column: 6 / span 3;
+    grid-row: 1 / span 4;
+  }
+
+  .project {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .project-1 {
+      background-image: url(../images/run_buddy.png);
+  }
+  .project-2, .project-3, .project-4 {
+      background-image: url(../images/project-placeholder.gif);
+  }
+  .project-img {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.project-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(120, 190, 248, 0.3), var(--s-color));;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .project:hover .project-img::after {
+    opacity: 1;
+  }
+  .project:hover .project-img h3 {
+    top: 0;
+  }
+  .project-img h3 {
+    position: relative;
+    z-index: 3;
+    font-size: 28px;
+    margin-bottom: 5px;
+    top: 200px;
+    transition: 0.6s;
+    color: #9ebbff;
+  }
+  .project-img h3 a {
+    text-decoration: none;
+    color: #9ebbff;
+  }
+
+/* "Contact" section */
+.contact-me {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 40px 20px;
+  }
+  .contact-info > * {
+    flex: 1;
+    margin: 15px;
+  }
+  .contact-info p {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-style: normal;
+  }
+.contact-form input, .contact-form textarea {
+    border: 1px solid var(--s-color);
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: var(--t-color);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  .contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255, 255, 255, 1);
+    outline: none;
+  }
+  .contact-form button {
+    width: 100%;
+    border: none;
+    background: var(--t-color);
+    columns: var(--s-color);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+  .contact-form button:hover {
+    color: var(--t-color);
+    background: var(--p-color);
+  }
+
+
+/* Footer Styles */
+footer {
+    background: var(--p-color);
+    width: 100%;
+    padding: 40px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer h4 {
+    color: var(--t-color);
+    font-size: 20px;
+    margin: 0;
+}
+footer div {
+    line-height: 1.5;
+    text-align: right;
+    color: var(--t-color);
+}
+
+
+
+
+section {
+    padding: 60px;
+}
+
+.flex-row {
+  display: flex;
+}
