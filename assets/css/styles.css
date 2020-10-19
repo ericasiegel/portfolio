@@ -403,22 +403,19 @@ section {
   
   /* MEDIA QUERY FOR TABLETS AND SMALLER */
   @media screen and (max-width: 768px) {
-    section {
-        padding: 30px 15px;
-      }
       .section-title {
         border-bottom: 2px solid var (--t-color);
         border-right: 0;
       }
       .grid-container, .project-grid-container {
-          grid-template-columns: 1fr;
-          grid-template-rows: 1fr;
+          width: 100%;
+          display: block;
+          width: auto;
+          gap: 5px;
       }
-      .grid-item {
-          grid-column: 1;
-      }
-  }
-  
+
+    }
+
   /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
   @media screen and (max-width: 575px) {
    
