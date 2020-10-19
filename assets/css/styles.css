@@ -138,7 +138,7 @@ header ul li a img {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 .grid-item {
     padding: 35px 0;
@@ -162,7 +162,7 @@ header ul li a img {
 }
 .grid-item.contact-head {
     grid-column: 1 / span 3;
-    grid-row: 5 / span 2;
+    grid-row: 5 / span 1;
 }
 .grid-item.about {
     grid-column: 4 / span 5;
@@ -176,7 +176,11 @@ header ul li a img {
 }
 .grid-item.contact {
     grid-column: 4 / span 5;
-    grid-row: 5 / span 2;
+    grid-row: 5 / span 1;
+}
+.grid-item.grid-projects {
+    grid-column: 4 /span 5;
+    grid-row: 2 / span 2;
 }
 
 /* "Projects" styles */
@@ -185,8 +189,7 @@ header ul li a img {
     width: 100%;
     height: fit-content;
     justify-content: center;
-    grid-column: 4 /span 5;
-    grid-row: 2 / span 2;
+
 }
 .project-grid-container {
     width: 100%;
@@ -243,7 +246,7 @@ header ul li a img {
     top: 0;
     left: 0;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.3s;
   }
   .project:hover .project-img::after {
     opacity: 1;
@@ -265,6 +268,10 @@ header ul li a img {
     color: #9ebbff;
   }
 
+/* resume styles  */
+.grid-item.resume p {
+    margin-left: 20px;
+}
 /* "Contact" section */
 .contact-me {
     display: flex;
@@ -285,7 +292,7 @@ header ul li a img {
   }
 .contact-form input, .contact-form textarea {
     border: 1px solid var(--s-color);
-    display: block;
+    display: inline-block;
     padding: 7px 15px;
     font-size: 16px;
     color: var(--t-color);
@@ -336,8 +343,6 @@ footer div {
 }
 
 
-
-
 section {
     padding: 60px;
 }
@@ -345,8 +350,6 @@ section {
 .flex-row {
   display: flex;
 }
-
-
 
 
 
@@ -383,7 +386,7 @@ section {
       text-align: center;
       width: 100%;
     }
-    .hero-subtitle h2 {
+    .hero-subtitle {
         width: 100%;
         text-align: center;
     }
@@ -393,7 +396,7 @@ section {
     .project-img h3, .project-img::after {
       display: none;
     }
-    .project-bio h3, .project-bio::after {
+    .project h3, .project::after {
       display: block;
     }
   }
@@ -403,9 +406,16 @@ section {
     section {
         padding: 30px 15px;
       }
-      .grid-item {
+      .section-title {
+        border-bottom: 2px solid var (--t-color);
+        border-right: 0;
+      }
+      .grid-container, .project-grid-container {
           grid-template-columns: 1fr;
           grid-template-rows: 1fr;
+      }
+      .grid-item {
+          grid-column: 1;
       }
   }
   
